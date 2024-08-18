@@ -119,6 +119,151 @@ The architecture of the Task Vault application is based on the Django framework 
 7. **Access the application**:
    - Admin Panel: `http://127.0.0.1:8000/admin/`
    - API Endpoints: `http://127.0.0.1:8000/api/`
+  
+### API Documentation
+
+ API-DOCUMENTATION.json
+├── PMBackend
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── settings.cpython-311.pyc
+│   │   ├── urls.cpython-311.pyc
+│   │   └── wsgi.cpython-311.pyc
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+├── README.md
+├── activity.log
+├── db.log
+├── db.sqlite3
+├── logentries
+│   ├── __pycache__
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── admin.cpython-311.pyc
+│   │   ├── apps.cpython-311.pyc
+│   │   ├── models.cpython-311.pyc
+│   │   ├── urls.cpython-311.pyc
+│   │   └── views.cpython-311.pyc
+│   └── migrations
+│       └── __pycache__
+│           └── __init__.cpython-311.pyc
+├── logs
+│   ├── __pycache__
+│   │   ├── admin.cpython-311.pyc
+│   │   └── models.cpython-311.pyc
+│   └── migrations
+│       └── __pycache__
+│           ├── 0001_initial.cpython-311.pyc
+│           └── __init__.cpython-311.pyc
+├── manage.py
+├── notifications
+│   ├── __pycache__
+│   │   ├── admin.cpython-311.pyc
+│   │   ├── models.cpython-311.pyc
+│   │   ├── serializers.cpython-311.pyc
+│   │   ├── urls.cpython-311.pyc
+│   │   └── views.cpython-311.pyc
+│   ├── admin.py
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       ├── 0001_initial.cpython-311.pyc
+│   │       └── __init__.cpython-311.pyc
+│   ├── models.py
+│   ├── serializers.py
+│   ├── urls.py
+│   └── views.py
+├── projects
+│   ├── __pycache__
+│   │   ├── admin.cpython-311.pyc
+│   │   ├── models.cpython-311.pyc
+│   │   ├── serializers.cpython-311.pyc
+│   │   ├── urls.cpython-311.pyc
+│   │   └── views.cpython-311.pyc
+│   ├── admin.py
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       ├── 0001_initial.cpython-311.pyc
+│   │       └── __init__.cpython-311.pyc
+│   ├── models.py
+│   ├── serializers.py
+│   ├── urls.py
+│   └── views.py
+├── tasks
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── admin.cpython-311.pyc
+│   │   ├── models.cpython-311.pyc
+│   │   ├── serializers.cpython-311.pyc
+│   │   ├── urls.cpython-311.pyc
+│   │   └── views.cpython-311.pyc
+│   ├── admin.py
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       ├── 0001_initial.cpython-311.pyc
+│   │       └── __init__.cpython-311.pyc
+│   ├── models.py
+│   ├── serializers.py
+│   ├── urls.py
+│   └── views.py
+├── teams
+│   ├── __init__.py
+│   ├── __pycache__
+│   │   ├── __init__.cpython-311.pyc
+│   │   ├── admin.cpython-311.pyc
+│   │   ├── models.cpython-311.pyc
+│   │   ├── serializers.cpython-311.pyc
+│   │   ├── urls.cpython-311.pyc
+│   │   └── views.cpython-311.pyc
+│   ├── admin.py
+│   ├── migrations
+│   │   ├── 0001_initial.py
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   │       ├── 0001_initial.cpython-311.pyc
+│   │       └── __init__.cpython-311.pyc
+│   ├── models.py
+│   ├── serializers.py
+│   ├── urls.py
+│   └── views.py
+└── users
+    ├── __init__.py
+    ├── __pycache__
+    │   ├── __init__.cpython-311.pyc
+    │   ├── admin.cpython-311.pyc
+    │   ├── apps.cpython-311.pyc
+    │   ├── models.cpython-311.pyc
+    │   ├── serializers.cpython-311.pyc
+    │   ├── urls.cpython-311.pyc
+    │   └── views.cpython-311.pyc
+    ├── admin.py
+    ├── apps.py
+    ├── migrations
+    │   ├── 0001_initial.py
+    │   ├── __init__.py
+    │   └── __pycache__
+    │       ├── 0001_initial.cpython-311.pyc
+    │       └── __init__.cpython-311.pyc
+    ├── models.py
+    ├── serializers.py
+    ├── tests.py
+    ├── urls.py
+    └── views.py
+
+31 directories, 105 files
+                                                                                
+┌──(bogdan㉿codeKiller)-[~/Documents/Personal_Projects/TaskVault/TaskVaulT]
+└─$ 
+
+
 
 ### License
 

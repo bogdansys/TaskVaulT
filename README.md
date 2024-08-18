@@ -1,10 +1,10 @@
 # Task Vault
 
-PMBackend is a minimalistic project management tool designed to provide essential functionalities for managing projects, tasks, and teams. It serves as a streamlined alternative to more complex tools like Jira and YouTrack, focusing on simplicity and ease of use. The backend is built using Django and SQLite, ensuring efficient project collaboration.
+Task Vault is a minimalistic project management tool designed to provide essential functionalities for managing projects, tasks, and teams. It serves as a streamlined alternative to more complex tools like Jira and YouTrack, focusing on simplicity and ease of use. The backend is built using Django and SQLite, ensuring efficient project collaboration.
 
 ## Overview
 
-The architecture of the PMBackend application is based on the Django framework with SQLite as the primary database. The backend handles user management, project management, task management, team management, logging and monitoring, notifications and alerts, and admin functionalities. The application follows a RESTful API design for client-server communication.
+The architecture of the Task Vault application is based on the Django framework with SQLite as the primary database. The backend handles user management, project management, task management, team management, logging and monitoring, notifications and alerts, and admin functionalities. The application follows a RESTful API design for client-server communication.
 
 ### Technologies Used
 

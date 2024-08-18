@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -57,7 +58,7 @@ MIDDLEWARE = [
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-     'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
@@ -86,7 +87,8 @@ WSGI_APPLICATION = 'PMBackend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {'default': dj_database_url.config(default='sqlite:///db.sqlite3')}
+DATABASES = {
+    'default': dj_database_url.config(default='sqlite:///db.sqlite3')
 }
 
 
@@ -159,6 +161,3 @@ LOGGING = {
 }
 
 CORS_ALLOW_ALL_ORIGINS = True
-
-
-import dj_database_url

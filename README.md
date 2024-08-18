@@ -2,7 +2,7 @@
 
 Task Vault is a minimalistic project management tool designed to provide essential functionalities for managing projects, tasks, and teams. It serves as a streamlined alternative to more complex tools like Jira and YouTrack, focusing on simplicity and ease of use. The backend is built using Django and SQLite, ensuring efficient project collaboration.
 
-###Why?
+### Why?
 - designed for locap deployment in enterpise enviroments who dont trust cloud hosted project management software.
 
 ## Overview

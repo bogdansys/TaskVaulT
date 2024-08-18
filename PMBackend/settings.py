@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-%##w73os%r6se@_!cmdfwd3im5m0=-hp_+pr-m7nv$vwd=32)2'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["taskvault.fly.dev", "localhost"]
 
 
 # Application definition
@@ -86,11 +86,7 @@ WSGI_APPLICATION = 'PMBackend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+DATABASES = {'default': dj_database_url.config(default='sqlite:///db.sqlite3')}
 }
 
 
@@ -164,3 +160,5 @@ LOGGING = {
 
 CORS_ALLOW_ALL_ORIGINS = True
 
+
+import dj_database_url

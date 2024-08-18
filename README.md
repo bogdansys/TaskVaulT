@@ -120,8 +120,8 @@ The architecture of the Task Vault application is based on the Django framework 
    - Admin Panel: `http://127.0.0.1:8000/admin/`
    - API Endpoints: `http://127.0.0.1:8000/api/`
   
-### API Documentation
-
+### File Structure
+```
  API-DOCUMENTATION.json
 ├── PMBackend
 │   ├── __init__.py
@@ -263,7 +263,7 @@ The architecture of the Task Vault application is based on the Django framework 
 ┌──(bogdan㉿codeKiller)-[~/Documents/Personal_Projects/TaskVault/TaskVaulT]
 └─$ 
 
-
+```
 
 ### License
 

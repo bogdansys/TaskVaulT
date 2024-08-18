@@ -259,9 +259,6 @@ The architecture of the Task Vault application is based on the Django framework 
     └── views.py
 
 31 directories, 105 files
-                                                                                
-┌──(bogdan㉿codeKiller)-[~/Documents/Personal_Projects/TaskVault/TaskVaulT]
-└─$ 
 
 ```
 

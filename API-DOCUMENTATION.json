@@ -1,0 +1,1171 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "PMBackend API",
+        "description": "API documentation for the PMBackend project",
+        "termsOfService": "https://www.google.com/policies/terms/",
+        "contact": {
+            "email": "contact@yourdomain.com"
+        },
+        "license": {
+            "name": "BSD License"
+        },
+        "version": "v1"
+    },
+    "host": "localhost:8000",
+    "schemes": [
+        "http"
+    ],
+    "basePath": "/api",
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "securityDefinitions": {
+        "Basic": {
+            "type": "basic"
+        }
+    },
+    "security": [
+        {
+            "Basic": []
+        }
+    ],
+    "paths": {
+        "/login/": {
+            "post": {
+                "operationId": "login_create",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "201": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "login"
+                ]
+            },
+            "parameters": []
+        },
+        "/notifications/": {
+            "get": {
+                "operationId": "notifications_list",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Notification"
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "notifications"
+                ]
+            },
+            "parameters": []
+        },
+        "/notifications/{id}/": {
+            "get": {
+                "operationId": "notifications_read",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Notification"
+                        }
+                    }
+                },
+                "tags": [
+                    "notifications"
+                ]
+            },
+            "put": {
+                "operationId": "notifications_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Notification"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Notification"
+                        }
+                    }
+                },
+                "tags": [
+                    "notifications"
+                ]
+            },
+            "patch": {
+                "operationId": "notifications_partial_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Notification"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Notification"
+                        }
+                    }
+                },
+                "tags": [
+                    "notifications"
+                ]
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "description": "A unique integer value identifying this notification.",
+                    "required": true,
+                    "type": "integer"
+                }
+            ]
+        },
+        "/profile/": {
+            "get": {
+                "operationId": "profile_read",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/UserProfile"
+                        }
+                    }
+                },
+                "tags": [
+                    "profile"
+                ]
+            },
+            "put": {
+                "operationId": "profile_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/UserProfile"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/UserProfile"
+                        }
+                    }
+                },
+                "tags": [
+                    "profile"
+                ]
+            },
+            "patch": {
+                "operationId": "profile_partial_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/UserProfile"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/UserProfile"
+                        }
+                    }
+                },
+                "tags": [
+                    "profile"
+                ]
+            },
+            "parameters": []
+        },
+        "/projects/": {
+            "get": {
+                "operationId": "projects_list",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Project"
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "projects"
+                ]
+            },
+            "post": {
+                "operationId": "projects_create",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Project"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Project"
+                        }
+                    }
+                },
+                "tags": [
+                    "projects"
+                ]
+            },
+            "parameters": []
+        },
+        "/projects/{id}/": {
+            "get": {
+                "operationId": "projects_read",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Project"
+                        }
+                    }
+                },
+                "tags": [
+                    "projects"
+                ]
+            },
+            "put": {
+                "operationId": "projects_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Project"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Project"
+                        }
+                    }
+                },
+                "tags": [
+                    "projects"
+                ]
+            },
+            "patch": {
+                "operationId": "projects_partial_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Project"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Project"
+                        }
+                    }
+                },
+                "tags": [
+                    "projects"
+                ]
+            },
+            "delete": {
+                "operationId": "projects_delete",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "projects"
+                ]
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "description": "A unique integer value identifying this project.",
+                    "required": true,
+                    "type": "integer"
+                }
+            ]
+        },
+        "/projects/{project_id}/tasks/": {
+            "get": {
+                "operationId": "projects_tasks_list",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Task"
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "projects"
+                ]
+            },
+            "post": {
+                "operationId": "projects_tasks_create",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Task"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Task"
+                        }
+                    }
+                },
+                "tags": [
+                    "projects"
+                ]
+            },
+            "parameters": [
+                {
+                    "name": "project_id",
+                    "in": "path",
+                    "required": true,
+                    "type": "string"
+                }
+            ]
+        },
+        "/projects/{project_id}/tasks/{id}/": {
+            "get": {
+                "operationId": "projects_tasks_read",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Task"
+                        }
+                    }
+                },
+                "tags": [
+                    "projects"
+                ]
+            },
+            "put": {
+                "operationId": "projects_tasks_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Task"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Task"
+                        }
+                    }
+                },
+                "tags": [
+                    "projects"
+                ]
+            },
+            "patch": {
+                "operationId": "projects_tasks_partial_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Task"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Task"
+                        }
+                    }
+                },
+                "tags": [
+                    "projects"
+                ]
+            },
+            "delete": {
+                "operationId": "projects_tasks_delete",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "projects"
+                ]
+            },
+            "parameters": [
+                {
+                    "name": "project_id",
+                    "in": "path",
+                    "required": true,
+                    "type": "string"
+                },
+                {
+                    "name": "id",
+                    "in": "path",
+                    "description": "A unique integer value identifying this task.",
+                    "required": true,
+                    "type": "integer"
+                }
+            ]
+        },
+        "/projects/{project_id}/team/": {
+            "get": {
+                "operationId": "projects_team_list",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Team"
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "projects"
+                ]
+            },
+            "post": {
+                "operationId": "projects_team_create",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Team"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Team"
+                        }
+                    }
+                },
+                "tags": [
+                    "projects"
+                ]
+            },
+            "parameters": [
+                {
+                    "name": "project_id",
+                    "in": "path",
+                    "required": true,
+                    "type": "string"
+                }
+            ]
+        },
+        "/register/": {
+            "post": {
+                "operationId": "register_create",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Register"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Register"
+                        }
+                    }
+                },
+                "tags": [
+                    "register"
+                ]
+            },
+            "parameters": []
+        },
+        "/role/{id}/": {
+            "get": {
+                "operationId": "role_read",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/UserRole"
+                        }
+                    }
+                },
+                "tags": [
+                    "role"
+                ]
+            },
+            "put": {
+                "operationId": "role_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/UserRole"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/UserRole"
+                        }
+                    }
+                },
+                "tags": [
+                    "role"
+                ]
+            },
+            "patch": {
+                "operationId": "role_partial_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/UserRole"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/UserRole"
+                        }
+                    }
+                },
+                "tags": [
+                    "role"
+                ]
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "description": "A unique integer value identifying this user.",
+                    "required": true,
+                    "type": "integer"
+                }
+            ]
+        },
+        "/tasks/": {
+            "get": {
+                "operationId": "tasks_list",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Task"
+                            }
+                        }
+                    }
+                },
+                "tags": [
+                    "tasks"
+                ]
+            },
+            "post": {
+                "operationId": "tasks_create",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Task"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Task"
+                        }
+                    }
+                },
+                "tags": [
+                    "tasks"
+                ]
+            },
+            "parameters": []
+        },
+        "/tasks/{id}/": {
+            "get": {
+                "operationId": "tasks_read",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Task"
+                        }
+                    }
+                },
+                "tags": [
+                    "tasks"
+                ]
+            },
+            "put": {
+                "operationId": "tasks_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Task"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Task"
+                        }
+                    }
+                },
+                "tags": [
+                    "tasks"
+                ]
+            },
+            "patch": {
+                "operationId": "tasks_partial_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Task"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Task"
+                        }
+                    }
+                },
+                "tags": [
+                    "tasks"
+                ]
+            },
+            "delete": {
+                "operationId": "tasks_delete",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "tasks"
+                ]
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "description": "A unique integer value identifying this task.",
+                    "required": true,
+                    "type": "integer"
+                }
+            ]
+        },
+        "/team/{id}/": {
+            "get": {
+                "operationId": "team_read",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Team"
+                        }
+                    }
+                },
+                "tags": [
+                    "team"
+                ]
+            },
+            "put": {
+                "operationId": "team_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Team"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Team"
+                        }
+                    }
+                },
+                "tags": [
+                    "team"
+                ]
+            },
+            "patch": {
+                "operationId": "team_partial_update",
+                "description": "",
+                "parameters": [
+                    {
+                        "name": "data",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Team"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "schema": {
+                            "$ref": "#/definitions/Team"
+                        }
+                    }
+                },
+                "tags": [
+                    "team"
+                ]
+            },
+            "delete": {
+                "operationId": "team_delete",
+                "description": "",
+                "parameters": [],
+                "responses": {
+                    "204": {
+                        "description": ""
+                    }
+                },
+                "tags": [
+                    "team"
+                ]
+            },
+            "parameters": [
+                {
+                    "name": "id",
+                    "in": "path",
+                    "description": "A unique integer value identifying this team.",
+                    "required": true,
+                    "type": "integer"
+                }
+            ]
+        }
+    },
+    "definitions": {
+        "Notification": {
+            "required": [
+                "type",
+                "message"
+            ],
+            "type": "object",
+            "properties": {
+                "id": {
+                    "title": "ID",
+                    "type": "integer",
+                    "readOnly": true
+                },
+                "user": {
+                    "title": "User",
+                    "type": "integer",
+                    "readOnly": true
+                },
+                "type": {
+                    "title": "Type",
+                    "type": "string",
+                    "maxLength": 255,
+                    "minLength": 1
+                },
+                "message": {
+                    "title": "Message",
+                    "type": "string",
+                    "minLength": 1
+                },
+                "created_at": {
+                    "title": "Created at",
+                    "type": "string",
+                    "format": "date-time",
+                    "readOnly": true
+                },
+                "read": {
+                    "title": "Read",
+                    "type": "boolean"
+                }
+            }
+        },
+        "UserProfile": {
+            "required": [
+                "username"
+            ],
+            "type": "object",
+            "properties": {
+                "username": {
+                    "title": "Username",
+                    "description": "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.",
+                    "type": "string",
+                    "pattern": "^[\\w.@+-]+$",
+                    "maxLength": 150,
+                    "minLength": 1
+                },
+                "email": {
+                    "title": "Email address",
+                    "type": "string",
+                    "format": "email",
+                    "maxLength": 254
+                },
+                "first_name": {
+                    "title": "First name",
+                    "type": "string",
+                    "maxLength": 150
+                },
+                "last_name": {
+                    "title": "Last name",
+                    "type": "string",
+                    "maxLength": 150
+                }
+            }
+        },
+        "Project": {
+            "required": [
+                "name"
+            ],
+            "type": "object",
+            "properties": {
+                "id": {
+                    "title": "ID",
+                    "type": "integer",
+                    "readOnly": true
+                },
+                "name": {
+                    "title": "Name",
+                    "type": "string",
+                    "maxLength": 255,
+                    "minLength": 1
+                },
+                "description": {
+                    "title": "Description",
+                    "type": "string"
+                },
+                "created_by": {
+                    "title": "Created by",
+                    "type": "integer",
+                    "readOnly": true
+                },
+                "created_at": {
+                    "title": "Created at",
+                    "type": "string",
+                    "format": "date-time",
+                    "readOnly": true
+                },
+                "updated_at": {
+                    "title": "Updated at",
+                    "type": "string",
+                    "format": "date-time",
+                    "readOnly": true
+                }
+            }
+        },
+        "Task": {
+            "required": [
+                "title",
+                "project"
+            ],
+            "type": "object",
+            "properties": {
+                "id": {
+                    "title": "ID",
+                    "type": "integer",
+                    "readOnly": true
+                },
+                "title": {
+                    "title": "Title",
+                    "type": "string",
+                    "maxLength": 255,
+                    "minLength": 1
+                },
+                "description": {
+                    "title": "Description",
+                    "type": "string"
+                },
+                "status": {
+                    "title": "Status",
+                    "type": "string",
+                    "enum": [
+                        "To Do",
+                        "In Progress",
+                        "Done"
+                    ]
+                },
+                "assigned_to": {
+                    "title": "Assigned to",
+                    "type": "integer",
+                    "x-nullable": true
+                },
+                "project": {
+                    "title": "Project",
+                    "type": "integer"
+                },
+                "created_at": {
+                    "title": "Created at",
+                    "type": "string",
+                    "format": "date-time",
+                    "readOnly": true
+                },
+                "updated_at": {
+                    "title": "Updated at",
+                    "type": "string",
+                    "format": "date-time",
+                    "readOnly": true
+                }
+            }
+        },
+        "Team": {
+            "required": [
+                "project",
+                "user",
+                "role"
+            ],
+            "type": "object",
+            "properties": {
+                "id": {
+                    "title": "ID",
+                    "type": "integer",
+                    "readOnly": true
+                },
+                "project": {
+                    "title": "Project",
+                    "type": "integer"
+                },
+                "user": {
+                    "title": "User",
+                    "type": "integer"
+                },
+                "role": {
+                    "title": "Role",
+                    "type": "string",
+                    "enum": [
+                        "Admin",
+                        "Member"
+                    ]
+                },
+                "added_at": {
+                    "title": "Added at",
+                    "type": "string",
+                    "format": "date-time",
+                    "readOnly": true
+                }
+            }
+        },
+        "Register": {
+            "required": [
+                "username",
+                "password",
+                "password2"
+            ],
+            "type": "object",
+            "properties": {
+                "username": {
+                    "title": "Username",
+                    "description": "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.",
+                    "type": "string",
+                    "pattern": "^[\\w.@+-]+$",
+                    "maxLength": 150,
+                    "minLength": 1
+                },
+                "email": {
+                    "title": "Email address",
+                    "type": "string",
+                    "format": "email",
+                    "maxLength": 254
+                },
+                "password": {
+                    "title": "Password",
+                    "type": "string",
+                    "minLength": 1
+                },
+                "password2": {
+                    "title": "Password2",
+                    "type": "string",
+                    "minLength": 1
+                }
+            }
+        },
+        "UserRole": {
+            "required": [
+                "username"
+            ],
+            "type": "object",
+            "properties": {
+                "id": {
+                    "title": "ID",
+                    "type": "integer",
+                    "readOnly": true
+                },
+                "username": {
+                    "title": "Username",
+                    "description": "Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.",
+                    "type": "string",
+                    "pattern": "^[\\w.@+-]+$",
+                    "maxLength": 150,
+                    "minLength": 1
+                },
+                "email": {
+                    "title": "Email address",
+                    "type": "string",
+                    "format": "email",
+                    "maxLength": 254
+                },
+                "is_staff": {
+                    "title": "Staff status",
+                    "description": "Designates whether the user can log into this admin site.",
+                    "type": "boolean"
+                },
+                "is_superuser": {
+                    "title": "Superuser status",
+                    "description": "Designates that this user has all permissions without explicitly assigning them.",
+                    "type": "boolean"
+                }
+            }
+        }
+    }
+}

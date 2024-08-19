@@ -24,7 +24,6 @@ urlpatterns = [
     path('api/', include('projects.urls')),  # Include project URLs
     path('api/', include('tasks.urls')),  # Include task URLs
     path('api/', include('teams.urls')),  # Include team URLs
-    path('api/', include('logentries.urls')),  # Include log URLs
     path('api/', include('notifications.urls')),  # Include notification URLs
 
     # Swagger and ReDoc paths
